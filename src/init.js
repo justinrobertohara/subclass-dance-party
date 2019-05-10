@@ -9,7 +9,6 @@ $(document).ready(function() {
      * maker functions available in the global scope, clicking that node
      * will call the function to make the dancer.
      */
-
     /* dancerMakerFunctionName is a string which must match
      * one of the dancer maker functions available in global scope.
      * A new object of the given type will be created and added
@@ -28,6 +27,14 @@ $(document).ready(function() {
       Math.random() * 1000,
       );
       $('body').append(dancer.$node);
+
+      window.dancers.push(dancer)
   });
-});
+  
+  $('.lineUpButton').on('click', function(event) {
+      $('.dancer').css('top', '50%');
+      $('.dancer').css('position', 'absolute');
+
+    })
+  });
 
