@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  console.log(window)
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -32,7 +33,7 @@ $(document).ready(function() {
   });
   
   $('.lineUpButton').on('click', function(event) {
-      $('.dancer').css('top', '50%');
+      $('.dancer').css('top', '90%');
       $('.dancer').css('position', 'absolute');
 
     })

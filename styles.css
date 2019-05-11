@@ -4,21 +4,41 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-image: url("http://images6.fanpop.com/image/photos/40600000/Snoopy-peanuts-40613455-1600-1200.jpg");
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1080px;
+  width: 1920px;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: black;
+  font-family: 'peanutsregular', 'helvetica'
 }
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
+  font-family: 'peanutsregular', 'helvetica'
+  
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: lightblue;
+  font-family: 'peanutsregular', 'helvetica'
 }
+
+@font-face {
+  font-family: 'peanutsregular';
+  src: url('/Users/stiggymac/Downloads/webfontkit-20190510-195117/peanuts_-webfont.woff2') format('woff2'),
+       url('/Users/stiggymac/Downloads/webfontkit-20190510-195117/peanuts_-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .title{
-  background-color: #777;
+  background-color: lightblue;
 }
 .dancer{
   border:10px solid red;
