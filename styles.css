@@ -5,21 +5,32 @@ body{
   margin: 0px;
   background-color:#444;
   background-image: url("http://images6.fanpop.com/image/photos/40600000/Snoopy-peanuts-40613455-1600-1200.jpg");
-  background-size: cover;
+  background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
-  object-fit: cover;
   font-size: 20px;
 }
 body, a:link, a:visited, a:active{
   color: white;
   font-family: 'peanutsregular', 'helvetica'
 }
-.title, .addDancerButton{
-  padding:5px 12px;
+.title {
+  padding:5px 10px;
+  padding-right: 150px;
   float:right;
   font-family: 'peanutsregular', 'helvetica'
-  
+}
+.addDancerButton{
+  padding:5px 10px;
+  float:right;
+  font-family: 'peanutsregular', 'helvetica'
+}
+.lineUpButton{
+  padding:5px 10px;
+  color: red;
+  float:right;
+  font-family: 'peanutsregular', 'helvetica';
+  color: grey
 }
 .topbar{
   height:32px;
