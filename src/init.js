@@ -42,6 +42,27 @@ $(document).ready(function () {
     $(this).toggle();
   })
 
+
+  // $('.interactButton').on('click', function (event) {
+
+  //   for (let i = 0; i < window.dancers.length-1; i++){
+  //     let dancerTop = window.dancers[i].top - window.dancers[i+1].top;
+  //     let dancerLeft = window.dancers[i].left - window.dancers[i+1].left;
+
+  //     let dancerDistance = Math.sqrt(Math.pow(dancerTop,2) + Math.pow(dancerLeft, 2))
+  //     let distanceArr = [];
+  //     distanceArr.push(dancerDistance)
+
+  //   }
+  
+  // })
+
+  // $('body').on('click', '.dancer', function () {
+
+  //   window.dancers.sort((a,b) {
+  //     return Math.sqrt(Math.pow(a.top,2) + Math.pow(b.top,2))
+  //   })
+  // })
 });
 
 
