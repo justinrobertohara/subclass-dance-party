@@ -1,7 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function() {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function (event) {
+  $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -22,26 +22,44 @@ $(document).ready(function () {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000,
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 1000
     );
     $('body').append(dancer.$node);
 
-    window.dancers.push(dancer)
+    window.dancers.push(dancer);
   });
 
-  $('.lineUpButton').on('click', function (event) {
+  $('.lineUpButton').on('click', function(event) {
     $('.dancer').css('top', '90%');
     $('.dancer').css('position', 'absolute');
-    console.log('lineup')
-  })
+    console.log('lineup');
+  });
 
+  $('body').on('click', '.dancer', function(event) {
+    var target = event.currentTarget;
+    $(target).css('border-style', 'dotted');
+    for (let i = 0; i < window.dancers.length; i++) {
+      console.log(window.dancers[i].$node[0]);
+      var nextTarget = window.dancers[i].$node[0];
+      if ($(nextTarget).hasClass('dancer rotate') === true) {
+        console.log('hello');
+        $(nextTarget).addClass('selected');
+      }
+    }
+  });
 
-  $('body').on('mouseover', '.dancer', function () {
-    $(this).toggle();
-  })
-
+  // $('.interactButton').on('click', function(event) {
+  //   for (let i = 0; i < window.dancers.length; i++) {
+  //     // if (window.dancers[i].hasClass('rotate') === true) {
+  //     //   $('.dancer').addclass('pulse');
+  //     // } else if (window.dancers[i].hasClass('pulse') === true) {
+  //     //   $('.dancer').addclass('rotate');
+  //     // }
+  //     console.log('this', window.dancers);
+  //   }
+  // });
 
   // $('.interactButton').on('click', function (event) {
 
@@ -54,7 +72,7 @@ $(document).ready(function () {
   //     distanceArr.push(dancerDistance)
 
   //   }
-  
+
   // })
 
   // $('body').on('click', '.dancer', function () {
@@ -64,6 +82,3 @@ $(document).ready(function () {
   //   })
   // })
 });
-
-
-
