@@ -49,7 +49,7 @@ $(document).ready(function() {
       }
     }
   });
-
+  //test
   // $('.interactButton').on('click', function(event) {
   //   for (let i = 0; i < window.dancers.length; i++) {
   //     // if (window.dancers[i].hasClass('rotate') === true) {
