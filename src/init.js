@@ -37,6 +37,7 @@ $(document).ready(function() {
     console.log('lineup');
   });
 
+  //interaction
   $('body').on('click', '.dancer', function(event) {
     var target = event.currentTarget;
     $(target).css('border-style', 'dotted');
@@ -44,7 +45,6 @@ $(document).ready(function() {
       console.log(window.dancers[i].$node[0]);
       var nextTarget = window.dancers[i].$node[0];
       if ($(nextTarget).hasClass('dancer rotate') === true) {
-        console.log('hello');
         $(nextTarget).addClass('selected');
       }
     }
@@ -73,12 +73,5 @@ $(document).ready(function() {
 
   //   }
 
-  // })
-
-  // $('body').on('click', '.dancer', function () {
-
-  //   window.dancers.sort((a,b) {
-  //     return Math.sqrt(Math.pow(a.top,2) + Math.pow(b.top,2))
-  //   })
   // })
 });
